@@ -1,5 +1,0 @@
-0:0:0:0:0:0:0:1 - - [10/Mar/2021:23:52:31 +0800] POST /register HTTP/1.1 200 795 http-bio-8080-exec-1 1049
-0:0:0:0:0:0:0:1 - - [10/Mar/2021:23:52:32 +0800] GET /static/css/bootstrap-4.6.0.min.css HTTP/1.1 200 161409 http-bio-8080-exec-3 14
-0:0:0:0:0:0:0:1 - - [10/Mar/2021:23:52:32 +0800] GET /static/js/jquery-3.5.1.slim.min.js HTTP/1.1 200 72379 http-bio-8080-exec-2 12
-0:0:0:0:0:0:0:1 - - [10/Mar/2021:23:52:32 +0800] GET /static/js/bootstrap-4.6.0.min.js HTTP/1.1 200 63467 http-bio-8080-exec-4 6
-0:0:0:0:0:0:0:1 - - [10/Mar/2021:23:52:35 +0800] POST /register HTTP/1.1 200 795 http-bio-8080-exec-6 7

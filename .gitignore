@@ -48,3 +48,5 @@ compiler/.gradle/*
 .extract
 # derby
 .db
+
+*.log
