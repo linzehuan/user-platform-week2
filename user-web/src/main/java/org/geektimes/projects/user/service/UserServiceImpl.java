@@ -9,16 +9,17 @@ import org.geektimes.projects.user.sql.LocalTransactional;
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class UserServiceImpl implements UserService {
 
 
-
-    @Resource (name = "bean/UserRepository")
+    @Resource(name = "bean/UserRepository")
     private UserRepository userRepository;
 
     @Resource(name = "bean/Validator")
@@ -28,6 +29,13 @@ public class UserServiceImpl implements UserService {
     // 默认需要事务
     @LocalTransactional
     public boolean register(User user) {
+        Set<ConstraintViolation<User>> violations = validator.validate(user);
+        violations.forEach(c -> {
+            System.out.println(c.getMessage());
+        });
+        if (!violations.isEmpty()) {
+             return false;
+        }
         // 主调用
         Collection<User> all = userRepository.getAll();
         System.out.println("all1 = " + all);

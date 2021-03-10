@@ -37,7 +37,7 @@ public class RegisterController implements PageController {
         user.setEmail(email);
         user.setName("test");
         user.setPassword(request.getParameter("password"));
-        user.setPhoneNumber("123345342");
+        user.setPhoneNumber(request.getParameter("phoneNumber"));
         boolean result = userService.register(user);
         String message = result ? "成功" : "失败";
         System.out.println("message = " + message);

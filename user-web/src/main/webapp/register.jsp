@@ -28,6 +28,8 @@
             for="inputPassword" class="sr-only">Password</label> <input
             type="password" id="inputPassword" name="password" class="form-control"
             placeholder="请输入密码" required>
+        <label for="inputPhoneNumber" class="sr-only">手机号</label>
+        <input type="tel" id="inputPhoneNumber" name="phoneNumber" class="form-control" placeholder="请输入手机号">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register
             </button>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
